@@ -11,7 +11,7 @@ export default async function AdminDashboard(params: { searchParams: { search?: 
   }
 
   const query = params.searchParams.search;
-  const users: User[] = query ? await clerkClient.users.getUserList({ query }) : [];
+  const users: any = query ? await clerkClient.users.getUserList({ query }) : [];
 
   return (
     <div className="p-6">
